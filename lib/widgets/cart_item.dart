@@ -61,6 +61,9 @@ class _CartItemState extends State<CartItem> {
                         IconButton(
                           icon: Icon(Icons.remove),
                           onPressed: () {
+                            setState(() {
+                              widget.cartItem.quantity--;
+                            });
                             cartBloc.add(DeleteItemFromCart(widget.cartItem));
                           },
                         ),
@@ -71,6 +74,9 @@ class _CartItemState extends State<CartItem> {
                         IconButton(
                           icon: Icon(Icons.add),
                           onPressed: () {
+                            setState(() {
+                              widget.cartItem.quantity++;
+                            });
                             cartBloc.add(AddItemToCart(widget.cartItem));
                           },
                         ),

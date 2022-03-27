@@ -19,7 +19,7 @@ class ApiHandling {
 
       final parsed = json.decode(response.data ?? "") as Map<String, dynamic>;
 
-      // logger.i(parsed);
+      logger.i(parsed);
 
       parsed.forEach((key, value) {
         // logger.i(value);
